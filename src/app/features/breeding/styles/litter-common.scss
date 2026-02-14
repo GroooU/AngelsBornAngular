@@ -1,0 +1,525 @@
+/// Общие стили для страниц помётов (раздел разведения).
+/// Миграция из: css/nashe-razvedenie/pomet-*.css
+/// Подключать через миксин в компоненте с :host для сохранения encapsulation.
+/// @param $host-selector - селектор хоста (по умолчанию ':host')
+@mixin litter-common($host-selector: ':host') {
+  #{$host-selector} {
+    p {
+      font-size: 18px;
+    }
+
+    .text-orange {
+      color: #D9860D;
+    }
+
+    .text-green,
+    .text-green_a {
+      color: #00F410;
+    }
+
+    .wrapper__content {
+      text-align: center;
+      align-items: center;
+      margin: 50px 0 0 55px;
+    }
+
+    .parents {
+      margin: 0 auto;
+      color: #fff;
+
+      .parents_info p {
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      .parents_name {
+        margin-bottom: 15px;
+
+        a {
+          color: #00F410;
+        }
+      }
+    }
+
+    .table_box {
+      margin-bottom: 25px;
+    }
+
+    .table_box:has(.table__box-father) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .table_box:not(:has(.table__box-father)) {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .table__box-mother,
+    .table__box-father {
+      max-width: 380px;
+      margin-bottom: 20px;
+
+      .table__title .table-p {
+        color: #fff;
+        margin: 0 0 8px 0;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+
+      .table__content {
+        margin-bottom: 10px;
+      }
+
+      .row-father,
+      .row-mother {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        height: auto;
+        min-height: 100px;
+        padding: 5px 0;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .table__content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      background-color: #D9860D;
+      padding: 7px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      img {
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        padding: 0 3px;
+      }
+    }
+
+    .table__content-mobile {
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      align-items: center;
+      background-color: #D9860D;
+      padding: 0 7px 7px 7px;
+      padding-top: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+
+      img {
+        height: 100%;
+        border-radius: 10px;
+        padding: 0 3px;
+      }
+    }
+
+    .table__row-mobile {
+      display: none;
+    }
+
+    .table__title {
+      display: block;
+      height: 30px;
+      background-color: #000;
+      padding: 1px 7px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      .table-p {
+        color: #fff;
+        font-size: 14px;
+        margin: 0;
+        margin-top: 4px;
+      }
+    }
+
+    .table__title.table__title-mobile {
+
+      .table-p {
+        font-size: 16px;
+      }
+
+      .title_father,
+      .title_mother {
+        margin-bottom: 5px;
+      }
+    }
+
+    .table-p {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .table_pappy-p {
+      color: #fff;
+      font-size: 18px;
+      margin: 3px 0 0 0;
+    }
+
+    .table_pappy-p_mobile {
+      font-size: 12px;
+      margin: 3px 0 0 0;
+    }
+
+    .column-one {
+      width: 100%;
+      padding-bottom: 0;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 0 3px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .table__content.column-one img {
+      margin-bottom: 15px;
+    }
+
+    .table__content.connect__content-mini.column-one-550px {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 0 3px;
+      }
+    }
+
+    .table__content-mini {
+      display: none;
+      margin: 0 auto;
+      padding: 0 7px 7px 7px;
+      padding-top: 0;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      background-color: #D9860D;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      img {
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        padding: 0 3px;
+      }
+    }
+
+    .titles {
+      margin: 20px 0 0 0;
+
+      .p_titles {
+        color: #fff;
+        font-size: 18px;
+        margin: 0 0 5px 0;
+      }
+    }
+
+    .p__margin {
+      margin-bottom: 25px;
+    }
+
+    .table__row {
+      height: 100px;
+      padding: 5px 0;
+    }
+
+    .pappy {
+      margin-top: 110px;
+      margin-bottom: 30px;
+    }
+
+    .pappy-info {
+      margin-top: 10px;
+
+      .pappy-info-p {
+        color: #fff;
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+
+    .pappy_5 {
+      margin: 0 auto;
+      margin-top: 110px;
+      max-width: 370px;
+    }
+
+    .public-img {
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .row-1__pappy-1,
+    .row-1__pappy-2,
+    .row-1__pappy-3,
+    .row-1__pappy-4,
+    .row-1__pappy-5,
+    .row-1__pappy-6,
+    .row-1__pappy-7,
+    .row-2__pappy-1,
+    .row-2__pappy-2,
+    .row-2__pappy-3,
+    .row-2__pappy-4,
+    .row-2__pappy-5,
+    .row-2__pappy-6,
+    .row-2__pappy-7,
+    .row-3__pappy-1,
+    .row-3__pappy-2,
+    .row-3__pappy-3,
+    .row-3__pappy-4,
+    .row-3__pappy-5,
+    .row-3__pappy-6,
+    .row-3__pappy-7,
+    .row-4__pappy-3,
+    .row-4__pappy-4,
+    .row-5__pappy-3,
+    .row-5__pappy-4,
+    .row-6__pappy-3,
+    .row-6__pappy-4 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 5px 0;
+      height: auto;
+
+      img {
+        max-width: 180px;
+        height: auto;
+        border-radius: 10px;
+        padding: 0 3px;
+      }
+    }
+
+    .column-one_none img,
+    .column-one-550px img {
+      max-width: 100%;
+    }
+
+    .connect__content-mini.column-one-550px {
+      padding-bottom: 0;
+    }
+
+    .table_mini-none,
+    .mini-none {
+      // утилиты из оригинальных файлов
+    }
+  }
+}
+
+/// Медиа-запросы для страниц помётов (из css/nashe-razvedenie).
+@mixin litter-common-media($host-selector: ':host') {
+  @media (max-width: 1187px) {
+    #{$host-selector} .wrapper__content {
+      margin: 50px 0 0 55px;
+    }
+    #{$host-selector} .parents {
+      max-width: 681px;
+    }
+    #{$host-selector} .table-p {
+      font-size: 11px;
+      margin-top: 4px;
+    }
+    #{$host-selector} .table__box-mother,
+    #{$host-selector} .table__box-father {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 792px) {
+    #{$host-selector} .wrapper__content {
+      margin: 50px 0 0 10px;
+    }
+    #{$host-selector} .parents {
+      max-width: 500px;
+    }
+    #{$host-selector} .table_box {
+      display: block;
+    }
+    #{$host-selector} .table-p {
+      font-size: 16px;
+    }
+    #{$host-selector} .table__box-mother,
+    #{$host-selector} .table__box-father {
+      margin: 0 auto;
+      max-width: 485px;
+    }
+    #{$host-selector} .table__box-mother {
+      margin-top: 50px;
+    }
+    #{$host-selector} .column-one_none img,
+    #{$host-selector} .column-one-550px img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    #{$host-selector} .table_pappy-p_mobile {
+      font-size: 12px;
+      margin: 3px 0 0 0;
+    }
+  }
+
+  @media (max-width: 566px) {
+    #{$host-selector} p {
+      font-size: 16px;
+    }
+    #{$host-selector} .parents {
+      max-width: 350px;
+    }
+    #{$host-selector} .table_box {
+      display: block;
+    }
+    #{$host-selector} .table__content {
+      padding: 5px;
+    }
+    #{$host-selector} .table-p {
+      font-size: 12px;
+    }
+    #{$host-selector} .p_titles {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    #{$host-selector} .pappy-info-p {
+      font-size: 14px;
+    }
+    #{$host-selector} .table__box-mother,
+    #{$host-selector} .table__box-father {
+      margin: 0 auto;
+      max-width: 485px;
+    }
+    #{$host-selector} .table__box-mother {
+      margin-top: 50px;
+    }
+    #{$host-selector} .table__row-mobile {
+      display: block;
+    }
+    #{$host-selector} .table__content-mini {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 0 5px;
+    }
+    #{$host-selector} .column-one-550px img {
+      width: 100%;
+      border-radius: 10px;
+      padding: 0 3px;
+    }
+    #{$host-selector} .column-one-550px {
+      padding-bottom: 0;
+    }
+    #{$host-selector} .row-1__pappy-1 img,
+    #{$host-selector} .row-1__pappy-2 img,
+    #{$host-selector} .row-1__pappy-3 img,
+    #{$host-selector} .row-1__pappy-4 img,
+    #{$host-selector} .row-1__pappy-5 img,
+    #{$host-selector} .row-1__pappy-6 img,
+    #{$host-selector} .row-1__pappy-7 img,
+    #{$host-selector} .row-2__pappy-1 img,
+    #{$host-selector} .row-2__pappy-2 img,
+    #{$host-selector} .row-2__pappy-3 img,
+    #{$host-selector} .row-2__pappy-4 img,
+    #{$host-selector} .row-2__pappy-5 img,
+    #{$host-selector} .row-2__pappy-6 img,
+    #{$host-selector} .row-2__pappy-7 img {
+      max-width: 100%;
+    }
+    #{$host-selector} .table_pappy-p_mobile {
+      font-size: 11px;
+      margin: 3px 0 0 0;
+    }
+    #{$host-selector} .table_pappy-p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 418px) {
+    #{$host-selector} p {
+      font-size: 14px;
+    }
+    #{$host-selector} .parents {
+      max-width: 270px;
+      margin: 0 auto;
+    }
+    #{$host-selector} .pappy {
+      margin-top: 50px;
+    }
+    #{$host-selector} .table__content {
+      padding: 5px;
+    }
+    #{$host-selector} .table-p {
+      font-size: 10px;
+    }
+    #{$host-selector} .p_titles {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+    #{$host-selector} .pappy-info-p {
+      font-size: 14px;
+    }
+    #{$host-selector} .table__box-mother,
+    #{$host-selector} .table__box-father {
+      margin: 0 auto;
+      max-width: 485px;
+    }
+    #{$host-selector} .table__box-mother {
+      margin-top: 50px;
+    }
+    #{$host-selector} .table__row-mobile {
+      display: block;
+    }
+    #{$host-selector} .connect__content-mini {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding-bottom: 0;
+    }
+    #{$host-selector} .table__content-mini {
+      max-width: 100%;
+    }
+    #{$host-selector} .row-1__pappy-1 img,
+    #{$host-selector} .row-1__pappy-2 img,
+    #{$host-selector} .row-1__pappy-3 img,
+    #{$host-selector} .row-1__pappy-4 img,
+    #{$host-selector} .row-1__pappy-5 img,
+    #{$host-selector} .row-1__pappy-6 img,
+    #{$host-selector} .row-1__pappy-7 img,
+    #{$host-selector} .row-2__pappy-1 img,
+    #{$host-selector} .row-2__pappy-2 img,
+    #{$host-selector} .row-2__pappy-3 img,
+    #{$host-selector} .row-2__pappy-4 img,
+    #{$host-selector} .row-2__pappy-5 img,
+    #{$host-selector} .row-2__pappy-6 img,
+    #{$host-selector} .row-2__pappy-7 img {
+      max-width: 100%;
+    }
+    #{$host-selector} .table_pappy-p_mobile {
+      font-size: 12px;
+      margin: 3px 0 0 0;
+    }
+    #{$host-selector} .table_pappy-p {
+      font-size: 12px;
+    }
+    #{$host-selector} .table__title-mobile {
+      height: 50px;
+    }
+  }
+}
