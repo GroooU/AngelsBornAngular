@@ -92,6 +92,37 @@
       margin: 0;
     }
   }
+
+  .table__box-father,
+  .table__box-mother {
+    margin-bottom: 20px;
+
+    .table__title .table-p {
+      color: #fff;
+      margin: 0 0 8px 0;
+    }
+    .table__content {
+      margin-bottom: 10px;
+    }
+    .row-father,
+    .row-mother {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .titles {
+    margin-top: 10px;
+    .p_titles {
+      color: #fff;
+      font-size: 14px;
+      margin: 0 0 4px 0;
+    }
+  }
 }
 
 @media (max-width: 550px) {
