@@ -206,6 +206,30 @@
       }
     }
 
+    .table__content.connect__content-mini.column-one-550px.puppy-photos,
+    .table__content.column-one-550px.puppy-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+
+      .photo-cell {
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
     .table__content-mini {
       display: none;
       margin: 0 auto;
@@ -323,7 +347,7 @@
 
     .table_mini-none,
     .mini-none {
-      // утилиты из оригинальных файлов
+      display: unset; /* legacy utility classes */
     }
   }
 }
@@ -424,6 +448,14 @@
       border-radius: 10px;
       padding: 0 3px;
     }
+    #{$host-selector} .puppy-photos .photo-cell img {
+      width: 100%;
+      height: 100%;
+    }
+    #{$host-selector} .puppy-photos {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 6px 8px;
+    }
     #{$host-selector} .column-one-550px {
       padding-bottom: 0;
     }
@@ -494,6 +526,10 @@
     }
     #{$host-selector} .table__content-mini {
       max-width: 100%;
+    }
+    #{$host-selector} .puppy-photos {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 5px 6px;
     }
     #{$host-selector} .row-1__pappy-1 img,
     #{$host-selector} .row-1__pappy-2 img,
