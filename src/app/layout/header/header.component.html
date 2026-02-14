@@ -1,0 +1,49 @@
+<header class="header">
+  <div class="container">
+    <a class="header__link" routerLink="/">
+      <div class="header__logo">
+        <div class="header_logo-main">
+          <img class="logo-main" src="assets/images/templates/header/logo.png" alt="Angel's Born">
+        </div>
+        <div class="header_label">
+          <h2 class="header_label-top">Angel's Born</h2>
+          <h3 class="header_label-bottom">питомник биглей и лабрадоров</h3>
+        </div>
+        <div class="header_logo-fci">
+          <img src="assets/images/templates/header/logo2.png" alt="FCI">
+        </div>
+      </div>
+    </a>
+    <div class="header__bottom">
+      <div class="header__contact-box">
+        <img src="assets/images/templates/icon/city-icon.png" class="header__contact-icon" alt="city Angel's Born">
+        <a class="header__contact">г. Москва</a>
+      </div>
+      <div class="header__contact-box mobile__contact-box_none">
+        <img src="assets/images/templates/icon/tell-icon.png" class="header__contact-icon" alt="phone Angel's Born">
+        <a href="tel:+79166752928" class="header__contact">+7 (916) 675-29-28</a>
+        <a href="tel:+79256013800" class="header__contact">+7 (925) 601-38-00</a>
+      </div>
+      <div class="header__contact-box">
+        <img src="assets/images/templates/icon/email-icon.png" class="header__contact-icon" alt="email Angel's Born">
+        <a href="mailto:angelsborn&#64;yandex.ru" class="header__contact">angelsborn&#64;yandex.ru</a>
+      </div>
+    </div>
+    <div class="mobile__contact-box_block">
+      <img src="assets/images/templates/icon/tell-icon.png" class="header__contact-icon" alt="phone Angel's Born">
+      <a href="tel:+79166752928" class="header__contact">+7 (916) 675-29-28</a>
+      <a href="tel:+79256013800" class="header__contact">+7 (925) 601-38-00</a>
+    </div>
+  </div>
+  <div class="header__images">
+    <img src="assets/images/templates/header/main.jpg" alt="Angel's Born">
+  </div>
+  <nav class="menu" [class.active]="menuOpen()">
+    <div class="menu_mobile">
+      <div class="header__burger" [class.active]="menuOpen()" (click)="toggleMenu()" role="button" aria-label="Меню">
+        <span></span>
+      </div>
+    </div>
+    <app-nav-menu [menuOpen]="menuOpen()" />
+  </nav>
+</header>

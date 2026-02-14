@@ -1,0 +1,14 @@
+<ul class="menu__list" [class]="listClassName()">
+  @for (item of navItems; track item.path) {
+    <li class="menu__list-item">
+      <a
+        [routerLink]="item.path ? '/' + item.path : '/'"
+        routerLinkActive="menu_list-link__white"
+        [routerLinkActiveOptions]="{ exact: item.path === '' }"
+        class="menu_list-link"
+      >
+        {{ item.label }}
+      </a>
+    </li>
+  }
+</ul>

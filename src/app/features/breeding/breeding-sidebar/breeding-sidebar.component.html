@@ -1,0 +1,7 @@
+<ul class="sidebar__list">
+  @for (letter of literas; track letter) {
+    <li class="sidebar__list-item" [class.sidebar__list-item__active]="activeLetter() === letter" [class.sidebar__list-item__active__mobile]="activeLetter() === letter">
+      <a class="sidebar__list-link" [routerLink]="['/nashe-razvedenie/pomet', letter]"><span class="mobile__span">ЛИТЕРА</span> "{{ letter }}"</a>
+    </li>
+  }
+</ul>

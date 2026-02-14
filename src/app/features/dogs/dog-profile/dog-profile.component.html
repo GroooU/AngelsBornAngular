@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="content__name">{{ pageTitle() }}</h1>
+  <div class="lable__info">
+    <p class="p__margin"></p>
+  </div>
+  <div class="wrapper__content">
+    @if (slug() === 'ultramarines-butterfly') {
+      <div class="content__box">
+        <div class="birthday">
+          <p class="p_birthday">26.07.2023</p>
+        </div>
+        <div class="table__title">
+          <p class="table-p">Ultramarines Butterfly - Баффи</p>
+        </div>
+        <div class="table__content">
+          <div class="row-1 table__row">
+            <img src="assets/images/nashi-sobaki/Baffi/face1.jpg" alt="Ultramarines Butterfly">
+            <img src="assets/images/nashi-sobaki/Baffi/face2.jpg" alt="Ultramarines Butterfly">
+            <img src="assets/images/nashi-sobaki/Baffi/rack.jpg" alt="Ultramarines Butterfly">
+          </div>
+        </div>
+      </div>
+    } @else {
+      <div class="content__box">
+        <p>Страница собаки (slug: {{ slug() }}). Контент можно добавить по образцу.</p>
+        <a routerLink="/nashi-sobaki">← Назад к списку</a>
+      </div>
+    }
+  </div>
+</div>

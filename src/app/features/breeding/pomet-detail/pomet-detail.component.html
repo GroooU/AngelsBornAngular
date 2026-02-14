@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 class="content__name">ЛИТЕРА "{{ letter() }}"</h1>
+  <div class="sidebar__wrapper">
+    <div class="sidebar">
+      <app-breeding-sidebar [activeLetter]="letter()" />
+    </div>
+    <div class="sidebar-mobile">
+      <div class="slider__sidebar">
+        @for (l of literas; track l) {
+          <div class="slider__sidebar-item">
+            <li class="sidebar__list-item" [class.sidebar__list-item__active__mobile]="letter() === l">
+              <a class="sidebar__list-link" [routerLink]="['/nashe-razvedenie/pomet', l.toLowerCase()]"><span class="mobile__span">ЛИТЕРА</span> "{{ l }}"</a>
+            </li>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="wrapper__content">
+      <div class="parents">
+        <p>Страница помёта с литерой «{{ letter() }}». Контент помёта можно подгружать по литере.</p>
+        <a routerLink="/nashe-razvedenie">← Наше разведение</a>
+        <a routerLink="/schenki">Щенки</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="content__name">Наше разведение</h1>
+  <div class="sidebar__wrapper">
+    <div class="sidebar">
+      <app-breeding-sidebar />
+    </div>
+    <div class="sidebar-mobile">
+      <div class="slider__sidebar">
+        @for (letter of literas; track letter) {
+          <div class="slider__sidebar-item">
+            <li class="sidebar__list-item"><a class="sidebar__list-link" [routerLink]="['/nashe-razvedenie/pomet', letter]"><span class="mobile__span">ЛИТЕРА</span> "{{ letter }}"</a></li>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="wrapper__content">
+      <div class="lable__info">
+        <p class="p__margin"> Очень надеемся, что наши малыши, которых мы растим с любовью и нежностью, обретут самых лучших владельцев! </p>
+        <p>Мы хотим, чтобы щенок, которого вы приобретёте у нас, приносил вам только радость и стал для вас настоящим другом. Будем искренне рады видеть вас в числе наших друзей, любителей породы. С радостью поделимся нашим опытом и знаниями.</p>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</div>
