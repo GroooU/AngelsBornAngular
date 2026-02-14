@@ -1,59 +1,9 @@
-/* Стили контента страниц (из style.css, istoriya.css, kontaktyi.css и др.) */
-.wrapper__content {
-  display: flex;
-  justify-content: space-around;
-}
+/* Общие стили контента страниц (используются в нескольких компонентах) */
 
-.content__text {
-  margin: 55px 0 0 40px;
-  max-width: 770px;
-  font-size: 18px;
-}
-
-.text-li {
-  color: #fff;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-.slider__news {
-  display: none;
-}
-
-.mobile__table-p {
-  display: none;
-}
-
-.content__last-news {
-  width: 400px;
-  margin: 55px 40px 0 25px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: center;
-}
-
-.new__data {
-  text-align: left;
-  padding-left: 5px;
-}
-
-.last__new-1,
-.last__new-2,
-.last__new-3 {
-  color: #fff;
-}
-
-.detail {
-  text-align: right;
-  color: #00F410;
-}
-
-.mobile__last-news {
-  display: none;
-}
+//.wrapper__content {
+//  display: flex;
+//  justify-content: space-around;
+//}
 
 .text-orange {
   color: #D9860D;
@@ -63,60 +13,47 @@ h2 {
   color: #00F410;
 }
 
-/* История */
-.p_right {
-  text-align: right;
+.p__margin {
+  margin-bottom: 25px;
 }
 
-.history {
-  margin: 55px 20px 10px 40px;
-  font-size: 18px;
-}
-
-@media (max-width: 800px) {
-  .history {
-    margin: 40px 15px 10px 25px;
-  }
-}
-
-@media (max-width: 375px) {
-  .history {
-    margin: 30px 10px 10px 18px;
-  }
-}
-
-/* Контакты */
-.logo__name {
-  font-size: 22px;
-}
-
-.content__contact {
-  text-align: right;
-  max-width: 185px;
+/* Блок вводного текста (разведение, щенки, наши собаки) */
+.lable__info {
   margin: 0 auto;
+  max-width: 570px;
+  margin-top: 55px;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 15px;
+  color: #fff;
+
+  p {
+    color: #fff;
+  }
 }
 
-.network__icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 300px;
-  height: 55px;
-  margin: 30px auto;
-  padding: 0 10px;
+/* Блоки «родители» (новости, щенки, помёт) */
+.parents_info p,
+.parents_name p {
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-.network__icon img {
-  width: 45px;
-  height: 45px;
-  border-radius: 10px;
+.parents_name a {
+  color: #00F410;
 }
 
-.network__icon a {
-  height: 45px;
-  border-radius: 10px;
+.liter_info p {
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-.email {
-  margin-left: 5px;
+.block-name p {
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+/* Мобильная версия: скрыть короткое имя на десктопе (показывается в компоненте списка собак на малых экранах) */
+.mobile__table-p {
+  display: none;
 }

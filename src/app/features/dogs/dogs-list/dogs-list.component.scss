@@ -69,6 +69,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  :host .table-p {
+    display: none;
+  }
+  :host .mobile__table-p {
+    display: block;
+  }
+}
+
 @media (max-width: 550px) {
   :host .wrapper__content {
     display: grid;

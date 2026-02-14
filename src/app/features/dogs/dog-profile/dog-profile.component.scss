@@ -1,0 +1,32 @@
+:host {
+  .content__box {
+    margin-bottom: 30px;
+    color: #fff;
+  }
+
+  .birthday .p_birthday {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .table__title .table-p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+  }
+
+  .table__content .table__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: cover;
+    }
+  }
+}

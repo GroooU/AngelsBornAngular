@@ -1,0 +1,6 @@
+:host {
+  /* Стили страницы «Наше разведение»: контент уже в .wrapper__content и .lable__info из глобальных _pages */
+  .wrapper__content .lable__info {
+    margin-top: 20px;
+  }
+}

@@ -8,7 +8,7 @@
       <div class="slider__sidebar">
         @for (letter of literas; track letter) {
           <div class="slider__sidebar-item">
-            <li class="sidebar__list-item"><a class="sidebar__list-link" [routerLink]="['/nashe-razvedenie/pomet', letter]"><span class="mobile__span">ЛИТЕРА</span> "{{ letter }}"</a></li>
+            <li class="sidebar__list-item"><a class="sidebar__list-link" [routerLink]="['/nashe-razvedenie/pomet', letter.toLowerCase()]"><span class="mobile__span">ЛИТЕРА</span> "{{ letter }}"</a></li>
           </div>
         }
       </div>
