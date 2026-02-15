@@ -1,0 +1,9 @@
+@use '../styles/litter-common' as litter;
+
+:host {
+  display: block;
+}
+
+// Стили для карточки щенка (.pappy, .table__title, .puppy-photos, .photo-cell, .pappy-info)
+@include litter.litter-common(':host');
+@include litter.litter-common-media(':host');

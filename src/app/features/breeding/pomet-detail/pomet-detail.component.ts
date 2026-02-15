@@ -4,10 +4,12 @@ import { RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 import { BreedingSidebarComponent } from '../breeding-sidebar/breeding-sidebar.component';
+import { PuppyCardComponent } from '../puppy-card/puppy-card.component';
+import { puppiesByLetter } from '../data/puppies-by-letter';
 
 @Component({
   selector: 'app-pomet-detail',
-  imports: [RouterLink, BreedingSidebarComponent],
+  imports: [RouterLink, BreedingSidebarComponent, PuppyCardComponent],
   templateUrl: './pomet-detail.component.html',
   styleUrl: './pomet-detail.component.scss'
 })
@@ -20,4 +22,6 @@ export class PometDetailComponent {
     this.route.paramMap.pipe(map((params) => (params.get('letter') ?? '').toUpperCase())),
     { initialValue: '' }
   );
+
+  readonly puppiesByLetter = puppiesByLetter;
 }

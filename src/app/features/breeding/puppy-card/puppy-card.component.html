@@ -1,0 +1,15 @@
+<div class="pappy">
+  <div class="table__title table__title-mobile">
+    <p class="table_pappy-p">{{ puppy().title }}</p>
+  </div>
+  <div class="table__content connect__content-mini column-one-550px puppy-photos">
+    @for (url of puppy().photoUrls; track url) {
+      <div class="photo-cell">
+        <img [src]="url" [alt]="puppy().altText">
+      </div>
+    }
+  </div>
+  <div class="pappy-info">
+    <p class="pappy-info-p">{{ puppy().ownerInfo }}</p>
+  </div>
+</div>
