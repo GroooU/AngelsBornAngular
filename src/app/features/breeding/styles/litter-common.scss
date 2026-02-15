@@ -214,6 +214,11 @@
       margin-bottom: 10px;
       padding-bottom: 10px;
 
+      /* Ровно 2 фото — сетка из двух колонок */
+      &:has(.photo-cell:nth-child(2):nth-last-child(1)) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .photo-cell {
         aspect-ratio: 1;
         overflow: hidden;
@@ -456,6 +461,9 @@
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 6px 8px;
     }
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(2):nth-last-child(1)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     #{$host-selector} .column-one-550px {
       padding-bottom: 0;
     }
@@ -530,6 +538,9 @@
     #{$host-selector} .puppy-photos {
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       gap: 5px 6px;
+    }
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(2):nth-last-child(1)) {
+      grid-template-columns: repeat(2, 1fr);
     }
     #{$host-selector} .row-1__pappy-1 img,
     #{$host-selector} .row-1__pappy-2 img,
