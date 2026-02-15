@@ -11,5 +11,5 @@ export class BreedingSidebarComponent {
   /** Текущая активная литера (для подсветки на странице помёта). */
   activeLetter = input<string | null>(null);
 
-  readonly literas = ['H', 'F', 'U', 'T', 'S', 'R', 'P', 'O', 'N', 'M', 'L', 'K', 'I', 'Z', 'J', 'E', 'D', 'G', 'V', 'B', 'A'];
+  readonly literas = ['SH', 'CH', 'C', 'H', 'F', 'U', 'T', 'S', 'R', 'P', 'O', 'N', 'M', 'L', 'K', 'I', 'Z', 'J', 'E', 'D', 'G', 'V', 'B', 'A'];
 }

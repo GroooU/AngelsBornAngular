@@ -159,4 +159,26 @@ export const litterHeaderByLetter: Record<string, LitterHeaderData> = {
     father: {title:"ОТЕЦ: Bory Wood Vidian Van Dyke",photoUrls:["assets/images/nashe-razvedenie/pomet-z/Father/face.jpg"],titles:["Юный Чемпион России","Юный Чемпион НКП","Юный Гранд Чемпион России","Юный Чемпион РКФ","Юный Чемпион Эстонии","Чемпион России","Чемпион РКФ","Чемпион НКП"]},
     mother: {title:"МАТЬ: Angel's Born Belanta",titleRouterLink:"/nashi-sobaki/angel-s-born-belanta",photoUrls:["assets/images/nashe-razvedenie/pomet-z/Mother/face.jpg","assets/images/nashe-razvedenie/pomet-z/Mother/rack.jpg"],titles:["Юный Чемпион России","2 x Юный Чемпион НКП","Чемпион России","Чемпион НКП","Чемпион РКФ","Гранд Чемпион России","Чемпион Казахстана","Чемпион Беларуссии","Гранд Чемпион Беларуссии","Чемпион Азербайджана","Чемпион Армении","Чемпион Грузии","Гранд Чемпион Грузии","Чемпион Кавказа","Кандидат в Интерчемпионы","Международный рабочий сертификат"]},
   },
+  'SH': {
+    introText: '03.09.2025 г. родились щенки от пары:',
+    parentsName: [{ text: 'Angel\'s Born Stinger', isLink: false }, { text: ' & ', isLink: false }, { text: 'Ultramarines Butterfly', routerLink: '/nashi-sobaki/ultramarines-butterfly', isLink: true }],
+    variant: 'single-image',
+    mainImage: { src: 'assets/images/nashe-razvedenie/pomet-sh/prezent.jpg', alt: 'Angel\'s Born Stinger & Ultramarines Butterfly' },
+    mainImageTitle: 'Литера "SH"',
+    publicImages: {
+      title: '4 мальчика и 2 девочки, все триколор',
+      photoUrls: ['assets/images/nashe-razvedenie/pomet-sh/dogs/face.jpg'],
+      altText: 'Помёт SH'
+    },
+  },
+  'CH': {
+    introText: 'Родились щенки. Литера «Ch».',
+    parentsName: [],
+    variant: 'parents-only',
+  },
+  'C': {
+    introText: 'Родились щенки. Литера «C».',
+    parentsName: [],
+    variant: 'parents-only',
+  },
 };

@@ -17,6 +17,24 @@
     </div>
     <div class="wrapper__content">
       @switch (letter()) {
+        @case ('SH') {
+          <app-litter-header [data]="litterHeaderByLetter['SH']" />
+          @for (p of puppiesByLetter['SH']; track p.title) {
+            <app-puppy-card [puppy]="p" />
+          }
+        }
+        @case ('CH') {
+          <app-litter-header [data]="litterHeaderByLetter['CH']" />
+          @for (p of puppiesByLetter['CH']; track p.title) {
+            <app-puppy-card [puppy]="p" />
+          }
+        }
+        @case ('C') {
+          <app-litter-header [data]="litterHeaderByLetter['C']" />
+          @for (p of puppiesByLetter['C']; track p.title) {
+            <app-puppy-card [puppy]="p" />
+          }
+        }
         @case ('S') {
           <app-litter-header [data]="litterHeaderByLetter['S']" />
           @for (p of puppiesByLetter['S']; track p.title) {

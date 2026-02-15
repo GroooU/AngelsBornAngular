@@ -215,8 +215,14 @@
       margin-bottom: 10px;
       padding-bottom: 10px;
 
-      /* Ровно 2 фото — сетка из двух колонок */
-      &:has(.photo-cell:nth-child(2):nth-last-child(1)) {
+      /* Количество фото кратно 2, но не кратно 6 — сетка из двух колонок (2, 4, 8, 10, 14, 16, 20) */
+      &:has(.photo-cell:nth-child(2):nth-last-child(1)),
+      &:has(.photo-cell:nth-child(4):nth-last-child(1)),
+      &:has(.photo-cell:nth-child(8):nth-last-child(1)),
+      &:has(.photo-cell:nth-child(10):nth-last-child(1)),
+      &:has(.photo-cell:nth-child(14):nth-last-child(1)),
+      &:has(.photo-cell:nth-child(16):nth-last-child(1)),
+      &:has(.photo-cell:nth-child(20):nth-last-child(1)) {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -462,7 +468,13 @@
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 6px 8px;
     }
-    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(2):nth-last-child(1)) {
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(2):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(4):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(8):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(10):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(14):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(16):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(20):nth-last-child(1)) {
       grid-template-columns: repeat(2, 1fr);
     }
     #{$host-selector} .column-one-550px {
@@ -540,7 +552,13 @@
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       gap: 5px 6px;
     }
-    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(2):nth-last-child(1)) {
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(2):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(4):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(8):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(10):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(14):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(16):nth-last-child(1)),
+    #{$host-selector} .puppy-photos:has(.photo-cell:nth-child(20):nth-last-child(1)) {
       grid-template-columns: repeat(2, 1fr);
     }
     #{$host-selector} .row-1__pappy-1 img,

@@ -1,18 +1,20 @@
 <div class="parents">
   <div class="parents_info"><p>{{ data().introText }}</p></div><br>
-  <div class="parents_name">
-    <p>
-      @for (part of data().parentsName; track $index) {
-        @if (part.isLink && part.routerLink) {
-          <a [routerLink]="part.routerLink"><span class="text-green_a">{{ part.text }}</span></a>
-        } @else if (part.text === ' & ') {
-          <span class="text-orange">{{ part.text }}</span>
-        } @else {
-          <span class="text-green">{{ part.text }}</span>
+  @if (data().parentsName.length > 0) {
+    <div class="parents_name">
+      <p>
+        @for (part of data().parentsName; track $index) {
+          @if (part.isLink && part.routerLink) {
+            <a [routerLink]="part.routerLink"><span class="text-green_a">{{ part.text }}</span></a>
+          } @else if (part.text === ' & ') {
+            <span class="text-orange">{{ part.text }}</span>
+          } @else {
+            <span class="text-green">{{ part.text }}</span>
+          }
         }
-      }
-    </p>
-  </div><br>
+      </p>
+    </div><br>
+  }
 
   @switch (data().variant) {
     @case ('two-columns') {

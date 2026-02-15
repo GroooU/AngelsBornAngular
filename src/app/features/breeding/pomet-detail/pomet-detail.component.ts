@@ -18,7 +18,7 @@ import { puppiesByLetter } from '../data/puppies-by-letter';
 export class PometDetailComponent {
   private readonly route = inject(ActivatedRoute);
 
-  readonly literas = ['H', 'F', 'U', 'T', 'S', 'R', 'P', 'O', 'N', 'M', 'L', 'K', 'I', 'Z', 'J', 'E', 'D', 'G', 'V', 'B', 'A'];
+  readonly literas = ['SH', 'CH', 'C', 'H', 'F', 'U', 'T', 'S', 'R', 'P', 'O', 'N', 'M', 'L', 'K', 'I', 'Z', 'J', 'E', 'D', 'G', 'V', 'B', 'A'];
 
   readonly letter = toSignal(
     this.route.paramMap.pipe(map((params) => (params.get('letter') ?? '').toUpperCase())),
