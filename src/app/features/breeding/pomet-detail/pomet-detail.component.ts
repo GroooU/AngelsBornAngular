@@ -4,12 +4,14 @@ import { RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 import { BreedingSidebarComponent } from '../breeding-sidebar/breeding-sidebar.component';
+import { LitterHeaderComponent } from '../litter-header/litter-header.component';
 import { PuppyCardComponent } from '../puppy-card/puppy-card.component';
+import { litterHeaderByLetter } from '../data/litter-headers-by-letter';
 import { puppiesByLetter } from '../data/puppies-by-letter';
 
 @Component({
   selector: 'app-pomet-detail',
-  imports: [RouterLink, BreedingSidebarComponent, PuppyCardComponent],
+  imports: [RouterLink, BreedingSidebarComponent, LitterHeaderComponent, PuppyCardComponent],
   templateUrl: './pomet-detail.component.html',
   styleUrl: './pomet-detail.component.scss'
 })
@@ -23,5 +25,6 @@ export class PometDetailComponent {
     { initialValue: '' }
   );
 
+  readonly litterHeaderByLetter = litterHeaderByLetter;
   readonly puppiesByLetter = puppiesByLetter;
 }

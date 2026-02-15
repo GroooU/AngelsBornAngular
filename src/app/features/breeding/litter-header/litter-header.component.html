@@ -1,0 +1,141 @@
+<div class="parents">
+  <div class="parents_info"><p>{{ data().introText }}</p></div><br>
+  <div class="parents_name">
+    <p>
+      @for (part of data().parentsName; track $index) {
+        @if (part.isLink && part.routerLink) {
+          <a [routerLink]="part.routerLink"><span class="text-green_a">{{ part.text }}</span></a>
+        } @else if (part.text === ' & ') {
+          <span class="text-orange">{{ part.text }}</span>
+        } @else {
+          <span class="text-green">{{ part.text }}</span>
+        }
+      }
+    </p>
+  </div><br>
+
+  @switch (data().variant) {
+    @case ('two-columns') {
+      @if (data().father && data().mother) {
+        <div class="table_box">
+          <div class="table__box-father">
+            <div class="table__box-father">
+              <div class="table__title">
+                @if (data().father!.titleRouterLink) {
+                  <p class="table-p"><a [routerLink]="data().father!.titleRouterLink">{{ data().father!.title }}</a></p>
+                } @else {
+                  <p class="table-p">{{ data().father!.title }}</p>
+                }
+              </div>
+              <div class="table__content">
+                <div class="row-father">
+                  @for (url of data().father!.photoUrls; track url) {
+                    <img [src]="url" [alt]="data().father!.title">
+                  }
+                </div>
+              </div>
+            </div>
+            <div class="titles">
+              @for (t of data().father!.titles; track t) {
+                <p class="p_titles">{{ t }}</p>
+              }
+            </div>
+          </div>
+          <div class="table__box-mother">
+            <div class="table__title">
+              @if (data().mother!.titleRouterLink) {
+                <p class="table-p"><a [routerLink]="data().mother!.titleRouterLink">{{ data().mother!.title }}</a></p>
+              } @else {
+                <p class="table-p">{{ data().mother!.title }}</p>
+              }
+            </div>
+            <div class="table__content">
+              <div class="row-mother">
+                @for (url of data().mother!.photoUrls; track url) {
+                  <img [src]="url" [alt]="data().mother!.title">
+                }
+              </div>
+            </div>
+            <div class="titles">
+              @for (t of data().mother!.titles; track t) {
+                <p class="p_titles">{{ t }}</p>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    }
+    @case ('single-image') {
+      <div class="table_box">
+        <div class="table__title table__title-mobile">
+          @if (data().mainImageTitle) {
+            <div class="table__title">
+              <p class="table_pappy-p">{{ data().mainImageTitle }}</p>
+            </div>
+          } @else if (data().mainImageFatherTitle || data().mainImageMotherTitle) {
+            @if (data().mainImageFatherTitle) {
+              <div class="title_father">
+                <p class="table-p">{{ data().mainImageFatherTitle }}</p>
+              </div>
+            }
+            @if (data().mainImageMotherTitle) {
+              <div class="title_mother">
+                @if (data().mainImageMotherLink) {
+                  <p class="table-p"><a [routerLink]="data().mainImageMotherLink">{{ data().mainImageMotherTitle }}</a></p>
+                } @else {
+                  <p class="table-p">{{ data().mainImageMotherTitle }}</p>
+                }
+              </div>
+            }
+          }
+        </div>
+        @if (data().mainImage) {
+          <div class="table__content column-one">
+            <img [src]="data().mainImage!.src" [alt]="data().mainImage!.alt">
+          </div>
+        }
+      </div>
+      @if (data().publicImages) {
+        <div class="public-img">
+          <div class="table__title" [class.table__title-mobile]="data().publicImages!.photoUrls.length > 1">
+            @if (data().publicImages!.title) {
+              <p class="table_pappy-p">{{ data().publicImages!.title }}</p>
+            }
+          </div>
+          @if (data().publicImages!.photoUrls.length === 1) {
+            <div class="table__content column-one">
+              <img [src]="data().publicImages!.photoUrls[0]" [alt]="data().publicImages!.altText">
+            </div>
+          } @else {
+            <div class="table__content connect__content-mini column-one-550px puppy-photos">
+              @for (url of data().publicImages!.photoUrls; track url) {
+                <div class="photo-cell">
+                  <img [src]="url" [alt]="data().publicImages!.altText">
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    }
+    @case ('public-photos-only') {
+      <div class="public-img">
+        <div class="table__title">
+          @if (data().publicImages?.title) {
+            <p class="table_pappy-p">{{ data().publicImages?.title }}</p>
+          }
+        </div>
+        <div class="table__content connect__content-mini column-one-550px puppy-photos">
+          @for (url of data().publicImages!.photoUrls; track url) {
+            <div class="photo-cell">
+              <img [src]="url" [alt]="data().publicImages!.altText">
+            </div>
+          }
+        </div>
+      </div>
+    }
+    @default {
+      <!-- parents-only: ничего кроме intro и parents_name -->
+    }
+  }
+</div>

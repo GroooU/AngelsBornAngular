@@ -18,192 +18,28 @@
     <div class="wrapper__content">
       @switch (letter()) {
         @case ('S') {
-        <div class="parents">
-          <div class="parents_info"><p>25.05.2022г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Wolmar Star Udo A True Noble</span> <span class="text-orange"> &amp; </span><a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy"><span class="text-green_a">Angel's Born Gwen Stacy</span></a></p>
-          </div><br>
-
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Wolmar Star Udo A True Noble</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy">МАТЬ: Angel's Born Gwen Stacy</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-s/prezent.jpg" alt="Wolmar Star Udo A True Noble &amp; Angel's Born Gwen Stacy">
-            </div>
-          </div>
-
-
+          <app-litter-header [data]="litterHeaderByLetter['S']" />
           @for (p of puppiesByLetter['S']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('D') {
-        <div class="parents">
-          <div class="parents_info"><p>01.07.2018 г. в нашем питомнике родились щенки: 2 мальчика и 2 девочки, все триколор от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green"> Sweetfonte the King of Heart (имп. Италия)</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-alicia-rey"><span class="text-green_a"> Angel's Born Alicia Rey</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Sweetfonte the King of Heart</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-alicia-rey">МАТЬ: Angel's Born Alicia Rey</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-d/Father/father.jpg" alt="Sweetfonte the King of Heart &amp; Angel's Born Alicia Rey">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['D']" />
           @for (p of puppiesByLetter['D']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('Z') {
-        <div class="parents">
-          <div class="parents_info"><p>31.12.2019 г. родились 3 мальчика (триколор) от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Bory Wood Vidian Van Dyke </span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-belanta"><span class="text-green_a">Angel's Born Belanta</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__box-father">
-              <div class="table__box-father">
-                <div class="table__title">
-                  <p class="table-p">ОТЕЦ: Bory Wood Vidian Van Dyke</p>
-                </div>
-                <div class="table__content">
-                  <div class="row-father">
-                    <img src="assets/images/nashe-razvedenie/pomet-z/Father/face.jpg" alt="Bory Wood Vidian Van Dyke">
-                  </div>
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">Юный Чемпион НКП</p>
-                <p class="p_titles">Юный Гранд Чемпион России</p>
-                <p class="p_titles">Юный Чемпион РКФ</p>
-                <p class="p_titles">Юный Чемпион Эстонии</p>
-                <p class="p_titles">Чемпион России</p>
-                <p class="p_titles">Чемпион РКФ</p>
-                <p class="p_titles">Чемпион НКП</p>
-              </div>
-            </div>
-            <div class="table__box-mother">
-              <div class="table__title">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-belanta">МАТЬ: Angel's Born Belanta</a></p>
-              </div>
-              <div class="table__content">
-                <div class="row-mother">
-                  <img src="assets/images/nashe-razvedenie/pomet-z/Mother/face.jpg" alt="Angel's Born Belanta">
-                  <img src="assets/images/nashe-razvedenie/pomet-z/Mother/rack.jpg" alt="Angel's Born Belanta">
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">2 x Юный Чемпион НКП</p>
-                <p class="p_titles">Чемпион России</p>
-                <p class="p_titles">Чемпион НКП</p>
-                <p class="p_titles">Чемпион РКФ</p>
-                <p class="p_titles">Гранд Чемпион России</p>
-                <p class="p_titles">Чемпион Казахстана</p>
-                <p class="p_titles">Чемпион Беларуссии</p>
-                <p class="p_titles">Гранд Чемпион Беларуссии</p>
-                <p class="p_titles">Чемпион Азербайджана</p>
-                <p class="p_titles">Чемпион Армении</p>
-                <p class="p_titles">Чемпион Грузии</p>
-                <p class="p_titles">Гранд Чемпион Грузии</p>
-                <p class="p_titles">Чемпион Кавказа</p>
-                <p class="p_titles">Кандидат в Интерчемпионы</p>
-                <p class="p_titles">Международный рабочий сертификат</p>
-              </div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['Z']" />
           @for (p of puppiesByLetter['Z']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('A') {
-        <div class="parents">
-          <div class="parents_info"><p>28 декабря 2015 г. в нашем питомнике "Angel's Born" родились щенки (4 мальчика и 1 девочка) от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Reno od Troch tabiel</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful"><span class="text-green_a">Varinhouse Young-And-Beautiful</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__box-father">
-              <div class="table__box-father">
-                <div class="table__title">
-                  <p class="table-p">ОТЕЦ: RENO OD TROCH TABIEL (РЕНО)</p>
-                </div>
-                <div class="table__content">
-                  <div class="row-father">
-                    <img src="assets/images/nashe-razvedenie/pomet-a/Father/face.jpg" alt="Reno od Troch tabiel">
-                    <img src="assets/images/nashe-razvedenie/pomet-a/Father/rack.jpg" alt="Reno od Troch tabiel">
-                  </div>
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">ИНТЕРЧЕМПИОН (Россия, Беларусь, Эстония)</p>
-                <p class="p_titles">Чемпион НКП</p>
-                <p class="p_titles">Чемпион России, Беларуси, Эстонии</p>
-                <p class="p_titles">Finnish Winner - 2012</p>
-                <p class="p_titles">Finnish Junior Winner - 2012</p>
-                <p class="p_titles">Bucharest Junior Winner - 2012</p>
-                <p class="p_titles">Юный призёр Чемпионата Мира 2012 (4/25)</p>
-                <p class="p_titles">Юный призёр Чемпионата Европы 2012 (3/7)</p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">Юный Чемпион НКП)</p>
-                <p class="p_titles">Юный Победитель Литовского НКП - 2012</p>
-                <p class="p_titles">Юный Чемпион Беларуси</p>
-                <p class="p_titles">Юный Чемпион Эстонии</p>
-                <p class="p_titles">Юный Чемпион Литвы</p>
-                <p class="p_titles">Юный Чемпион Румынии</p>
-                <p class="p_titles">Bis Baby - I</p>
-                <p class="p_titles">Bis Baby - II</p>
-                <p class="p_titles">Bis Baby - IV</p>
-                <p class="p_titles">Best PUPPY - SHOW I</p>
-                <p class="p_titles">Лучший Щенок - ЕВРАЗИЯ 2012 и т.д.</p>
-              </div>
-            </div>
-            <div class="table__box-mother">
-              <div class="table__title">
-                <p class="table-p"><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful">МАТЬ: VARINHOUSE YOUNG-AND-BEAUTIFUL (НИКА)</a></p>
-              </div>
-              <div class="table__content">
-                <div class="row-mother">
-                  <img src="assets/images/nashe-razvedenie/pomet-a/Mother/Face.jpg" alt="Varinhouse Young and Beautiful">
-                  <img src="assets/images/nashe-razvedenie/pomet-a/Mother/rack.jpg" alt="Varinhouse Young and Beautiful">
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">2 x Юный Чемпион НКП</p>
-                <p class="p_titles">Лучшая сука-юниор России 2013-1</p>
-                <p class="p_titles">Лучший юниор России 2013-2</p>
-                <p class="p_titles">Cruft's Qualification 2014</p>
-                <p class="p_titles">Чемпион России</p>
-                <p class="p_titles">Чемпион НКП</p>
-                <p class="p_titles">Чемпион РФСС</p>
-              </div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['A']" />
           @for (p of puppiesByLetter['A']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
           <div class="pappy_5">
             <div class="table__title table__title-mobile">
               <p class="table_pappy-p"><a class="table_pappy-p_mobile" routerLink="/nashi-sobaki/angel-s-born-alicia-rey">Девочка 1 - Angel's Born Alisia Rey (Алиса)</a></p>
@@ -215,520 +51,108 @@
               <p class="pappy-info-p">Владелец: Измайлова Ирина, г.Москва</p>
             </div>
           </div>
-        </div>
         }
         @case ('B') {
-        <div class="parents">
-          <div class="parents_info"><p>06.09.2016 г. в нашем питомнике родились щенки 3 мальчика (1 триколор, 2 биколор) и 4 девочки триколор. от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Art-Fantasy Make a Hit  (TИМОН)</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful"><span class="text-green_a">Varinhouse Young-And-Beautiful (НИКА)</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__box-father">
-              <div class="table__box-father">
-                <div class="table__title">
-                  <p class="table-p">ОТЕЦ: ART-FANTASY MAKE A HIT  (TИМОН)  </p>
-                </div>
-                <div class="table__content">
-                  <div class="row-father">
-                    <img src="assets/images/nashe-razvedenie/pomet-b/Father/Rack.jpg" alt="ART-FANTASY MAKE A HIT">
-                  </div>
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">Чемпион России, Литвы, Эстонии</p>
-                <p class="p_titles">Победитель Балтии`15</p>
-                <p class="p_titles">Чемпион Породы`14</p>
-                <p class="p_titles">Лучший Представитель породы Шоу Чемпионов «Золотой Ошейник»</p>
-                <p class="p_titles">Лучший Представитель Породы и резервный победитель группы выставки «Памяти Сабанеева»</p>
-                <p class="p_titles">2 х Чемпион НКП</p>
-                <p class="p_titles">Чемпион РКФ</p>
-                <p class="p_titles">Рабочий диплом</p>
-              </div>
-            </div>
-            <div class="table__box-mother">
-              <div class="table__title">
-                <p class="table-p"><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful">МАТЬ: VARINHOUSE YOUNG-AND-BEAUTIFUL (НИКА)</a></p>
-              </div>
-              <div class="table__content">
-                <div class="row-mother">
-                  <img src="assets/images/nashe-razvedenie/pomet-a/Mother/Face.jpg" alt="Varinhouse Young and Beautiful">
-                  <img src="assets/images/nashe-razvedenie/pomet-a/Mother/rack.jpg" alt="Varinhouse Young and Beautiful">
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">2 x Юный Чемпион НКП</p>
-                <p class="p_titles">Лучшая сука-юниор России 2013-1</p>
-                <p class="p_titles">Лучший юниор России 2013-2</p>
-                <p class="p_titles">Cruft's Qualification 2014</p>
-                <p class="p_titles">Чемпион России</p>
-                <p class="p_titles">Чемпион НКП</p>
-                <p class="p_titles">Чемпион РФСС</p>
-                <p class="p_titles">Гранд Чемпион</p>
-                <p class="p_titles">Рабочий диплом</p>
-              </div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['B']" />
           @for (p of puppiesByLetter['B']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('E') {
-        <div class="parents">
-          <div class="parents_info"><p>26.05.2019 г. в нашем питомнике родились щенки. мальчик триколор и девочка биколор от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Astravegas Shon Penn</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful"><span class="text-green_a">Varinhouse Young-And-Beautiful</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__box-father">
-              <div class="table__box-father">
-                <div class="table__title">
-                  <p class="table-p">ОТЕЦ: ASTRAVEGAS SHON PENN</p>
-                </div>
-                <div class="table__content">
-                  <div class="row-father">
-                    <img src="assets/images/nashe-razvedenie/pomet-e/Father/Ci05Z.jpg" alt="ASTRAVEGAS SHON PENN">
-                    <img src="assets/images/nashe-razvedenie/pomet-e/Father/LdU7m.jpg" alt="ASTRAVEGAS SHON PENN">
-                  </div>
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Интер Чемпион</p>
-                <p class="p_titles">Мульти Чемпион</p>
-                <p class="p_titles">ЧНКП</p>
-                <p class="p_titles">ЧРКФ</p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">Юный Чемпион Беларуси</p>
-                <p class="p_titles">Чемпион России</p>
-                <p class="p_titles">Чемпион Беларуси</p>
-                <p class="p_titles">Чемпион Литвы</p>
-                <p class="p_titles">Чемпион Латвии</p>
-                <p class="p_titles">Чемпион Чехии</p>
-                <p class="p_titles">Чемпион Армении</p>
-                <p class="p_titles">Чемпион Грузии</p>
-                <p class="p_titles">Чемпион Молдовы</p>
-                <p class="p_titles">Чемпион Словении</p>
-                <p class="p_titles">Чемпион Азербайджана</p>
-                <p class="p_titles">Чемпион Кавказа</p>
-                <p class="p_titles">Кандидат в Чемпионы Венгрии</p>
-                <p class="p_titles">Гранд Чемпион России</p>
-                <p class="p_titles">Гранд Чемпион Беларуси</p>
-                <p class="p_titles">Гранд Чемпион Армении</p>
-                <p class="p_titles">Гранд Чемпион Грузии</p>
-                <p class="p_titles">Гранд Чемпион Молдовы</p>
-                <p class="p_titles">Гранд Чемпион Азербайджана</p>
-                <p class="p_titles">18 CACIB</p>
-                <p class="p_titles">Международный Рабочий Сертификат</p>
-              </div>
-            </div>
-            <div class="table__box-mother">
-              <div class="table__title">
-                <p class="table-p"><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful">МАТЬ: VARINHOUSE YOUNG-AND-BEAUTIFUL (НИКА)</a></p>
-              </div>
-              <div class="table__content">
-                <div class="row-mother">
-                  <img src="assets/images/nashe-razvedenie/pomet-a/Mother/Face.jpg" alt="Varinhouse Young and Beautiful">
-                  <img src="assets/images/nashe-razvedenie/pomet-a/Mother/rack.jpg" alt="Varinhouse Young and Beautiful">
-                </div>
-              </div>
-              <div class="titles">
-                <p class="p_titles"><i>Титулы:</i></p>
-                <p class="p_titles">Юный Чемпион России</p>
-                <p class="p_titles">2 x Юный Чемпион НКП</p>
-                <p class="p_titles">Лучшая сука-юниор России 2013-1</p>
-                <p class="p_titles">Лучший юниор России 2013-2</p>
-                <p class="p_titles">Cruft's Qualification 2014</p>
-                <p class="p_titles">Чемпион России</p>
-                <p class="p_titles">2x Чемпион НКП</p>
-                <p class="p_titles">Чемпион РКФ</p>
-                <p class="p_titles">Гранд Чемпион</p>
-                <p class="p_titles">Чемпион РФСС, РФЛС, ОАНКОО</p>
-                <p class="p_titles">Чемпион Беларуси </p>
-                <p class="p_titles">Международный Рабочий Сертификат</p>
-              </div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['E']" />
           @for (p of puppiesByLetter['E']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('F') {
-        <div class="parents">
-          <div class="parents_info"><p>17.05.2023г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Simonaland Cezar</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy"><span class="text-green_a"><u>Angel's Born Gwen Stacy</u></span></a></p>
-          </div>
-          <br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="table__title">
-                <p class="table_pappy-p">3 мальчика (2 триколора, 1 биколор) и 4 девочки триколор</p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-f/prezent.jpg" alt="Beauty`s Glance Zesty Flavour &amp; Angel's Born Jenny Jolie">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['F']" />
           @for (p of puppiesByLetter['F']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('G') {
-        <div class="parents">
-          <div class="parents_info"><p>28.05.2018 г. в нашем питомнике родились щенки: 3 мальчика и 1 девочка, все триколор от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Astravegas Shon Penn </span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-belanta"><span class="text-green_a">Angel's Born Belanta</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Astravegas Shon Penn</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-belanta">МАТЬ: Angel's Born Belanta</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-g/Father/father.jpg" alt="Astravegas Shon Penn &amp; Angel's Born Belanta">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['G']" />
           @for (p of puppiesByLetter['G']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('H') {
-        <div class="parents">
-          <div class="parents_info"><p>08.06.2023г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Varinhouse Heavenly Beautiful</span>
-            <span class="text-orange"> &amp; </span>
-            <a routerLink="/nashi-sobaki/angel-s-born-alicia-rey"><span class="text-green_a"><u>Angel's Born Alicia Rey</u></span></a></p>
-          </div>
-          <br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="table__title">
-                <p class="table_pappy-p">2 мальчика триколор и 5 девочки триколор</p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-h/dogs/face1.jpg" alt="Varinhouse Heavenly Beautiful &amp; Angel's Born Alicia Rey">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['H']" />
           @for (p of puppiesByLetter['H']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('I') {
-        <div class="parents">
-          <div class="parents_info"><p>13.07.2020 г. родились 2 мальчика триколор, 4 девочки (2 триколор, 2 биколор) от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Art-Fantasy Volt</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-alicia-rey"><span class="text-green_a"><u>Angel's Born Alicia Rey</u></span></a></p>
-          </div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Art-Fantasy Volt</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-alicia-rey">МАТЬ: Angel's Born Alicia Rey</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-i/Father/father.jpg" alt="Art-Fantasy Volt &amp; Angel's Born Alicia Rey">
-            </div>
-          </div>
-          <div class="public-img">
-            <div class="table__title">
-            </div>
-            <div class="table__content connect__content-mini column-one-550px puppy-photos ">
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-i/dogs/public.jpg" alt="Angel's Born Alicia Rey"></div>
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-i/dogs/face.jpg" alt="Angel's Born Alicia Rey"></div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['I']" />
           @for (p of puppiesByLetter['I']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('J') {
-        <div class="parents">
-          <div class="parents_info"><p>14.06.2019 г. в нашем питомнике родились щенки. 4 мальчика и 2 девочки. Все триколор. от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Beagelee Road Runner</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-alicia-rey"><span class="text-green_a">Angel's Born Alicia Rey</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Beagelee Road Runner</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-alicia-rey">МАТЬ: Angel's Born Alicia Rey (АЛИСА)</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-j/Father/father.jpg" alt="">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['J']" />
           @for (p of puppiesByLetter['J']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('K') {
-        <div class="parents">
-          <div class="parents_info"><p>20.07.2020 г. 4 мальчика (3 триколор, 1 биколор) и 2 девочки триколор от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Simonaland Cezar</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy"><span class="text-green_a"><u>Angel's Born Gwen Stacy</u></span></a></p>
-          </div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Simonaland Cezar</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy">МАТЬ: Angel's Born Gwen Stacy</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-k/Father/father.jpg" alt="Simonaland Cezar &amp; Angel's Born Alicia Rey">
-            </div>
-          </div>
-          <div class="public-img">
-            <div class="table__title">
-            </div>
-            <div class="table__content connect__content-mini column-one-550px puppy-photos">
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-k/public.jpg" alt="Angel's Born Gwen Stacy"></div>
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-k/dogs/face1.jpg" alt="Angel's Born Gwen Stacy"></div>
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-k/dogs/face2.jpg" alt="Angel's Born Gwen Stacy"></div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['K']" />
           @for (p of puppiesByLetter['K']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('L') {
-        <div class="parents">
-          <div class="parents_info"><p>25.07.2020 г. родились 2 мальчика триколор и 3 девочки (2 триколор, 1 биколор). от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Simonaland Make My Day</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful"><span class="text-green_a"><u>Varinhouse Young-and-Beautiful</u></span></a></p></div>
-          <br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Simonaland Make My Day</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful">МАТЬ: Varinhouse Young-and-Beautiful</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-l/Father/father.jpg" alt="Simonaland Make My Day &amp; Varinhouse Young-and-Beautiful">
-            </div>
-          </div>
-          <div class="public-img">
-            <div class="table__title table__title-mobile">
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-l/public.jpg" alt="Varinhouse Young and Beautiful">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['L']" />
           @for (p of puppiesByLetter['L']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('M') {
-        <div class="parents">
-          <div class="parents_info"><p>24.01.2021г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Simonaland Energy Top</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashe-razvedenie/pomet-e"><span class="text-green_a"><u>Angel's Born Emilia Del Toro</u></span></a></p>
-          </div><br>
-          <div class="public-img">
-            <div class="table__title">
-              <p class="table_pappy-p">3 мальчика, 3 девочки триколор</p>
-            </div>
-            <div class="table__content connect__content-mini column-one-550px puppy-photos">
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-m/dogs/IMG-20210123-WA0013.jpg" alt="Angel's Born"></div>
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-m/dogs/IMG-20210123-WA0017.jpg" alt="Angel's Born"></div>
-              <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-m/dogs/IMG-20210123-WA0042.jpg" alt="Angel's Born"></div>
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['M']" />
           @for (p of puppiesByLetter['M']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('N') {
-        <div class="parents">
-          <div class="parents_info"><p>01.04.2021г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Beagelee Road Runner</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-belanta"><span class="text-green_a">Angel's Born Belanta</span></a></p>
-          </div><br>
-
+          <app-litter-header [data]="litterHeaderByLetter['N']" />
           @for (p of puppiesByLetter['N']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('O') {
-        <div class="parents">
-          <div class="parents_info"><p>15.07.2021г. родились 6 мальчиков (3 триколор, 3 биколор). от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Astravegas Shon Penn</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-alicia-rey"><span class="text-green_a">Angel's Born Alicia Rey</span></a></p>
-          </div><br>
-
+          <app-litter-header [data]="litterHeaderByLetter['O']" />
           @for (p of puppiesByLetter['O']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('P') {
-        <div class="parents">
-          <div class="parents_info"><p>15.07.2021г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Simonaland Energy Top</span> <span class="text-orange"> &amp; </span><a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy"><span class="text-green_a">Angel's Born Gwen Stacy</span></a></p>
-          </div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Simonaland Energy Top</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/angel-s-born-gwen-stacy">МАТЬ: Angel's Born Gwen Stacy</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-p/prezent.jpg" alt="Simonaland Energy Top &amp; Angel's Born Gwen Stacy">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['P']" />
           @for (p of puppiesByLetter['P']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('R') {
-        <div class="parents">
-          <div class="parents_info"><p>24.11.2021г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Sarah Less's Pack Austin</span> <span class="text-orange"> &amp; </span><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful"><span class="text-green_a">Varinhouse Young-and-Beautiful</span></a></p>
-          </div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Sarah Less's Pack Austin</p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful">МАТЬ: Varinhouse Young-and-Beautiful</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-r/prezent.jpg" alt="Sarah Less's Pack Austin &amp; Varinhouse Young-and-Beautiful">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['R']" />
           @for (p of puppiesByLetter['R']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('T') {
-        <div class="parents">
-          <div class="parents_info"><p>22.08.2022г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Beauty`s Glance Zesty Flavour</span> <span class="text-orange"> &amp; </span><a routerLink="/nashe-razvedenie/pomet-j"><span class="text-green_a">Angel's Born Jenny Jolie</span></a></p>
-          </div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="table__title">
-                <p class="table_pappy-p">3 мальчика и 1 девочка триколор</p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-t/prezent.jpg" alt="Beauty`s Glance Zesty Flavour &amp; Angel's Born Jenny Jolie">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['T']" />
           @for (p of puppiesByLetter['T']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('U') {
-        <div class="parents">
-          <div class="parents_info"><p>05.01.2023г. родились щенки от пары:</p></div><br>
-          <div class="parents_name">
-            <p><span class="text-green">Varinhouse Heavenly Beautiful</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/angel-s-born-belanta"><span class="text-green_a"><u>Angel's Born Belanta</u></span></a></p>
-          </div>
-          <br>
-          <div class="table__title table__title-mobile">
-            <div class="table__title">
-              <p class="table_pappy-p">1 мальчик и 2 девочки триколор</p>
-            </div>
-          </div>
-          <div class="table__content connect__content-mini column-one-550px puppy-photos">
-            <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-u/dogs/IMG_20230112_183302.jpg" alt="Varinhouse Heavenly Beautiful &amp; Angel's Born Belanta"></div>
-            <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-u/dogs/IMG_20230113_125915.jpg" alt="Varinhouse Heavenly Beautiful &amp; Angel's Born Belanta"></div>
-            <div class="photo-cell"><img src="assets/images/nashe-razvedenie/pomet-u/dogs/IMG_20230113_130030.jpg" alt="Varinhouse Heavenly Beautiful &amp; Angel's Born Belanta"></div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['U']" />
           @for (p of puppiesByLetter['U']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @case ('V') {
-        <div class="parents">
-          <div class="parents_info"><p>25.01.2018 г. в нашем питомнике родились щенки: 4 мальчика и 1 девочка, все триколор от пары:</p></div><br>
-          <div class="parents_name"><p><span class="text-green">Fanta's Brand Jumping Jack Flash  </span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful"><span class="text-green_a">Varinhouse Young-And-Beautiful</span></a></p></div><br>
-          <div class="table_box">
-            <div class="table__title table__title-mobile">
-              <div class="title_father">
-                <p class="table-p">ОТЕЦ: Fanta's Brand Jumping Jack Flash  </p>
-              </div>
-              <div class="title_mother">
-                <p class="table-p"><a routerLink="/nashi-sobaki/varinhouse-young-and-beautiful">МАТЬ:  Varinhouse Young-And-Beautiful</a></p>
-              </div>
-            </div>
-            <div class="table__content column-one">
-              <img src="assets/images/nashe-razvedenie/pomet-v/Father/father.jpg" alt="Fanta's Brand Jumping Jack Flash &amp; Varinhouse Young and Beautiful">
-            </div>
-          </div>
-
+          <app-litter-header [data]="litterHeaderByLetter['V']" />
           @for (p of puppiesByLetter['V']; track p.title) {
             <app-puppy-card [puppy]="p" />
           }
-
-        </div>
         }
         @default {
         <div class="parents">

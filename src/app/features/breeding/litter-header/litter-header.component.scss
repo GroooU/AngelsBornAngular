@@ -1,0 +1,8 @@
+@use '../styles/litter-common' as litter;
+
+:host {
+  display: block;
+}
+
+@include litter.litter-common(':host');
+@include litter.litter-common-media(':host');
