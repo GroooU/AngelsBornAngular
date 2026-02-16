@@ -1,123 +1,29 @@
 <div class="container">
   <h1 class="content__name">Щенки</h1>
-  <div class="wrapper__content">
+  <div class="sidebar__wrapper">
+    <div class="sidebar" aria-hidden="true"></div>
+    <div class="wrapper__content">
     <div class="parents">
       <div class="lable__info">
-        <p class="p__margin"> Очень надеемся, что наши малыши, которых мы растим с любовью и нежностью, обретут самых лучших владельцев! </p>
+        <p class="p__margin">Очень надеемся, что наши малыши, которых мы растим с любовью и нежностью, обретут самых лучших владельцев!</p>
         <p>Мы хотим, чтобы щенок, которого вы приобретёте у нас, приносил вам только радость и стал для вас настоящим другом. Будем искренне рады видеть вас в числе наших друзей, любителей породы. С радостью поделимся нашим опытом и знаниями.</p>
       </div>
-      <div class="status__pappy">
-        <p class="text-green status__pappy-p">У нас есть щенки!</p>
-      </div>
-      <div class="pappy">
-        <p>03.09.2025 г., родились щенки от пары:</p>
-        <div class="parents_name"><p><span class="text-green">Angel's Born Stinger</span> <span class="text-orange"> &amp; </span> <a routerLink="/nashi-sobaki/ultramarines-butterfly"><span class="text-green_a"><u>Ultramarines Butterfly</u></span></a></p></div>
-        <p class="text-orange">Литера "SH"</p>
-        <div class="table__title">
-          <p class="table_pappy-p">Литера "SH"</p>
+      @if (littersOnPuppiesPage.length > 0) {
+        <div class="status__pappy">
+          <p class="text-green status__pappy-p">У нас есть щенки!</p>
         </div>
-        <div class="table__content connect__content-mini column-one">
-          <div class="prezent">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/prezent.jpg" alt="Angel's Born">
-          </div>
-        </div>
-        <br>
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p">4 мальчика и 2 девочки, все триколор</p>
-        </div>
-        <div class="table__content connect__content-mini column-one">
-          <div class="prezent">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/dogs/face.jpg" alt="Angel's Born">
-          </div>
-        </div>
-      </div>
-
-      <div class="pappy">
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p"><span>Мальчик 1 - Angel's Born Sharm El Sheikh</span></p>
-        </div>
-        <div class="table__content connect__content-mini column-one-550px">
-          <div class="row-1__pappy-1_liter-m">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy1/face1.jpg" alt="Angel's Born Sharm El Sheikh">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy1/face2.jpg" alt="Angel's Born Sharm El Sheikh">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy1/rack.jpg" alt="Angel's Born Sharm El Sheikh">
-          </div>
-        </div>
-      </div>
-
-      <div class="pappy">
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p"><span>Мальчик 2 - Angel's Born Shimmer Shine</span></p>
-        </div>
-        <div class="table__content connect__content-mini column-one-550px">
-          <div class="row-1__pappy-2_liter-m">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy2/face1.jpg" alt="Angel's Born Shimmer Shine">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy2/face2.jpg" alt="Angel's Born Shimmer Shine">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy2/rack.jpg" alt="Angel's Born Shimmer Shine">
-          </div>
-        </div>
-      </div>
-
-      <div class="pappy">
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p"><span>Мальчик 3 - Angel's Born Sheraton</span></p>
-        </div>
-        <div class="table__content connect__content-mini column-one-550px">
-          <div class="row-1__pappy-3_liter-m">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy3/face1.jpg" alt="Angel's Born Sheraton">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy3/face2.jpg" alt="Angel's Born Sheraton">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy3/face3.jpg" alt="Angel's Born Sheraton">
-          </div>
-        </div>
-        <div class="table__content table__content-mini_one dogs1-row1 column-one">
-          <img src="assets/images/nashe-razvedenie/pomet-sh/pappy3/rack.jpg" alt="Angel's Born Sheraton">
-        </div>
-      </div>
-
-      <div class="pappy">
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p"><span>Мальчик 4 - Angel's Born Shok Wave</span></p>
-        </div>
-        <div class="table__content connect__content-mini column-one-550px">
-          <div class="row-1__pappy-4_liter-m">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy4/face1.jpg" alt="Angel's Born Shok Wave">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy4/face2.jpg" alt="Angel's Born Shok Wave">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy4/face3.jpg" alt="Angel's Born Shok Wave">
-          </div>
-        </div>
-        <div class="table__content table__content-mini_one dogs4-row1 column-one">
-          <img src="assets/images/nashe-razvedenie/pomet-sh/pappy4/rack.jpg" alt="Angel's Born Shok Wave">
-        </div>
-      </div>
-
-      <div class="pappy">
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p"><span>Девочка 1 - Angel's Born Shevy Plus</span></p>
-        </div>
-        <div class="table__content connect__content-mini column-one-550px">
-          <div class="row-1__pappy-5_liter-m">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy5/face1.jpg" alt="Angel's Born Shevy Black">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy5/face2.jpg" alt="Angel's Born Shevy Black">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy5/face3.jpg" alt="Angel's Born Shevy Black">
-          </div>
-        </div>
-        <div class="table__content table__content-mini_one dogs4-row1 column-one">
-          <img src="assets/images/nashe-razvedenie/pomet-sh/pappy5/rack.jpg" alt="Angel's Born Shok Wave">
-        </div>
-      </div>
-
-      <div class="pappy">
-        <div class="table__title table__title-mobile">
-          <p class="table_pappy-p"><span>Девочка 2 - Angel's Born Shedy Lady</span></p>
-        </div>
-        <div class="table__content connect__content-mini column-one-550px">
-          <div class="row-1__pappy-6_liter-m">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy6/face1.jpg" alt="Angel's Born Shedy Lady">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy6/face2.jpg" alt="Angel's Born Shedy Lady">
-            <img src="assets/images/nashe-razvedenie/pomet-sh/pappy6/rack.jpg" alt="Angel's Born Shedy Lady">
-          </div>
-        </div>
-      </div>
+        @for (letter of littersOnPuppiesPage; track letter) {
+          @if (litterHeaderByLetter[letter]) {
+            <app-litter-header [data]="litterHeaderByLetter[letter]" />
+          }
+          @if (puppiesByLetter[letter]?.length) {
+            @for (p of puppiesByLetter[letter]; track p.title) {
+              <app-puppy-card [puppy]="p" />
+            }
+          }
+        }
+      }
+    </div>
     </div>
   </div>
 </div>

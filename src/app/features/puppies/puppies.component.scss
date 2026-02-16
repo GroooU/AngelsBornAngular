@@ -1,3 +1,9 @@
+@use '../breeding/styles/litter-common' as litter;
+
+// Те же правила грида и вёрстки, что и в разделе «Наше разведение»
+@include litter.litter-common(':host');
+@include litter.litter-common-media(':host');
+
 .fs-22{
   font-size: 22px;
   margin-bottom: 20px;
