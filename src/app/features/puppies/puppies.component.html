@@ -16,7 +16,7 @@
           @if (litterHeaderByLetter[letter]) {
             <app-litter-header [data]="litterHeaderByLetter[letter]" />
           }
-          @if (puppiesByLetter[letter]?.length) {
+          @if (puppiesByLetter[letter].length) {
             @for (p of puppiesByLetter[letter]; track p.title) {
               <app-puppy-card [puppy]="p" />
             }
